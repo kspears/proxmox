@@ -1,7 +1,7 @@
 #!/bin/bash
 # Not using Sudo on LXC so updating offical docker install commands to match
 
-$ for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do apt-get -y remove $pkg; done
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do apt-get -y remove $pkg; done
 apt-get update && apt-get -y upgrade
 apt-get install ca-certificates curl gnupg
 install -m 0755 -d /etc/apt/keyrings
